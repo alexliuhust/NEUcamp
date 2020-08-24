@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yelp Camp Ladush</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" href="/stylesheets/main.css"> -->
+</head>
+	
+	
+<body>
+	
+	<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+			</div>
+			
+			
+			<div class="collapse navbar-collapse" id="collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="navs"><a href="#">My courses</a></li>
+					<li class="navs"><a href="#">Add course</a></li>
+					<li class="navs"><a href="#">Add building</a></li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<% if (!currentUser) { %>
+						<li class="navs"><a href="/login">Log In</a></li>
+						<li class="navs"><a href="/register">Sign up</a></li>
+					<% } else { %>
+						<li class="navs"><a href="#">Signed in as <%= currentUser.username %></a></li>
+						<li class="navs"><a href="/logout">Log Out</a></li>
+					<% } %>
+					
+					
+				</ul>
+			</div>
+
+		</div>
+	</nav>
