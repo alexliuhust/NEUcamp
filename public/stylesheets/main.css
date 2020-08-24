@@ -1,0 +1,88 @@
+h1 {
+	font-size: 40px;
+	text-align: center;
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.myForm {
+	width: 85%;
+	margin: 50px auto;
+}
+
+textarea {
+	width: 50%;
+	margin-bottom: 30px;
+}
+
+#deleteForm {
+	display: inline;
+}
+
+.MoreInfo {
+	margin: 5px;
+}
+
+
+.navs {
+	font-size: 18px;
+}
+
+.thumbnail {
+	padding: 0;
+}
+
+.caption-full {
+	padding: 8px;
+}
+
+.img-responsive {
+	width: 100%;
+}
+
+.description {
+	margin-top: 30px;
+}
+
+.showPageComments {
+	margin-top: 30px;
+}
+
+
+
+.buttonsDiv {
+	padding-top: 10px;
+}
+
+.singleComment {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+	padding-bottom: 5px;
+}
+
+.commentText {
+	margin-bottom: 2px;
+}
+
+.commentsTitle {
+	padding-top: 10px;
+	font-size: 25px;
+	font-weight: 700;
+	border-bottom: 2px solid grey;
+}
+
+.glyphicon-plus {
+	color: grey;
+}
+
+.logContainer {
+	max-width: 400px;
+	width: 70%;
+	margin: 0 auto;
+}
+
+
+

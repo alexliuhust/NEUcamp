@@ -12,13 +12,14 @@ var courseSchema = new mongoose.Schema({
 		},
 		username: String
 	},
-	classroom: {
-		building: {
-			type: mongoose.Schema.Types.ObjectId,
-	 		ref: "Building"
-		},
-		room: String
-	}
+	classroom: String
+	// classroom: {
+	// 	building: {
+	// 		type: mongoose.Schema.Types.ObjectId,
+	//  		ref: "Building"
+	// 	},
+	// 	room: String
+	// }
 });
 
 module.exports = mongoose.model("Course", courseSchema);

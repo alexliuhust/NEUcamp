@@ -3,14 +3,9 @@ var express 	= require("express"),
 	passport 	= require("passport"),
 	User 		= require("../models/user");
 
-
 //=====================Authentication Routes!!!=======================
 router.get("/", function(req, res) {
 	res.render("homepage.ejs");
-});
-
-router.get("/secret", isLoggedIn, function(req, res) {
-	res.send("Welcome to the secret page!!!!");
 });
 
 router.get("/register", function(req, res) {
@@ -27,7 +22,7 @@ router.post("/register", function(req, res) {
 		} else {
 			passport.authenticate("local")(req, res, function() {
 				// req.flash("success", "Sign Up!");
-				res.redirect("/secret");
+				res.redirect("/courses");
 			});
 		}
 	});
@@ -37,7 +32,7 @@ router.get("/login", function(req, res) {
 	res.render("authentication/login.ejs");
 });
 router.post("/login", passport.authenticate("local", {
-	successRedirect: "/secret",
+	successRedirect: "/courses",
 	failureRedirect: "/login"
 }), function(req, res) {
 });
@@ -47,11 +42,6 @@ router.get("/logout", function(req, res) {
 	// req.flash("success", "Successfully Logged Out!");
 	res.redirect("/");
 });
-
-function isLoggedIn(req, res, next) {
-	if (req.isAuthenticated()) return next();
-	res.redirect("/login");
-}
 
 
 module.exports = router;
