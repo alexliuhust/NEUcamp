@@ -9,7 +9,6 @@ var express     		= require("express"),
 	User				= require("./models/user"),
 	Course				= require("./models/course"),
 	Building			= require("./models/building"),
-	
 	passport			= require("passport"),
 	LocalStrategy 		= require("passport-local"),
 	passportLocalMongoose = require("passport-local-mongoose");
@@ -40,26 +39,38 @@ app.use(flash());
 
 // Passport configuration
 app.use(require("express-session")({
-	secret: "Alexander Liu was Cool",
+	secret: "AlexanderLiu was Cool",
 	resave: false,
 	saveUninitialized: false
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 
 
+// Require routes
+var authRoutes      = require("./routes/auth");
 
 
+
+
+// Pass the variable currentUser to every route
+app.use(function(req, res, next) {
+	res.locals.currentUser = req.user;
+	next();
+});
+
+// Use the routes and pre-set the prefix of the URL
+app.use("/", authRoutes);
 
 
 // ==============================================================================
-app.get("/", function(req, res) {
-	res.send("The home page!");
-});
+
+
 
 app.get("*", function(req, res) {
 	res.send("Iyt dsinh iyt'r de ivarmah neut phovaund 404, iyt alsshiynebul?");
