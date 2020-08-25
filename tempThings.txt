@@ -1,0 +1,45 @@
+
+// ========================== Initial Data for Buildings ==============================
+// var data = [
+// 	{
+// 		name: "Egan Research Center",
+// 		image: "/buildingImages/Egan.jpg",
+// 		description: "A prime nanotechnology research centre at Northeastern university. One of the facilities here is the George J Kostas Nanoscale Science Research Centre which has cleanrooms from class 100,000 to class 10 for micro and nano tech research. There's also on-campus meeting space for faculty and staff-sponsored events. The center features state-of-the-art audio-visual capabilites, full kitchen facilities, and two breakout/seminar rooms.",
+// 		location: "https://www.google.com/maps/place/Egan+Research+Center/@42.3376196,-71.0868663,17.33z/data=!4m5!3m4!1s0x89e37a2242375c21:0x36cbd69c9cb6a03d!8m2!3d42.3376754!4d-71.0888734"
+// 	}, 
+// 	{
+// 		name: "Interdisciplinary Science & Engineering Complex",
+// 		image: "/buildingImages/ISEC.jpg",
+// 		description: "NEU - Inter deciplinery building :-Very captivating. The stamp of ultimate luxury is prominently visible. The ease for design in the developing countries is the very advanced ventilation and temperature control systems, along with the luxury of uninterrupted power supply.",
+// 		location: "https://www.google.com/maps/place/Northeastern+University+Interdisciplinary+Science+%26+Engineering+Complex/@42.3376196,-71.0868663,17.33z/data=!4m5!3m4!1s0x0:0xbab99b179dfdea31!8m2!3d42.3377151!4d-71.0869617"
+// 	},
+// 	{
+// 		name: "Ryder Hall",
+// 		image: "/buildingImages/Ryder_Hall.jpg",
+// 		description: "Good Subway inside, also contains the Arts department. Spacey classrooms but the heat can be on the fritz sometimes. ",
+// 		location: "https://www.google.com/maps/place/Northeastern+University+-+Ryder+Hall/@42.3359279,-71.0911443,17.92z/data=!4m5!3m4!1s0x89e37a2231ffd0e3:0x2c41b534c8efab93!8m2!3d42.3366747!4d-71.0905927"
+// 	},
+// 	{
+// 		name: "Shillman Hall",
+// 		image: "/buildingImages/Shillman_Hall.jpg",
+// 		description: "Good and silent place to study. The classrooms are good and u even have an outlet of Dunkin donuts. Helps when u want to grab a cup of coffee during your study mode.",
+// 		location: "https://www.google.com/maps/place/Shillman+Hall/@42.3370664,-71.090468,17.92z/data=!4m5!3m4!1s0x89e37a223e177f73:0x17b8cc1f82aa4c1a!8m2!3d42.3375535!4d-71.0901911"
+// 	},
+// 	{
+// 		name: "Snell Library",
+// 		image: "/buildingImages/Snell_Library.jpg",
+// 		description: "Great place to study and even hang out. The printers are very conevnient in case you need to print anything. Good place to come read in between classes or at 3am because it's 24/7",
+// 		location: "https://www.google.com/maps/place/Snell+Library/@42.3379827,-71.0890084,17.33z/data=!4m5!3m4!1s0x89e37a1999cf5ce1:0x46e17e056ed496c3!8m2!3d42.3383961!4d-71.0880715"
+// 	}
+// ];
+
+
+// data.forEach(function(bds) {
+// 	Building.create(bds, function(err, building) {
+// 		if (err) console.log(err);
+// 		else console.log("Successfully added a new building");
+// 	});
+// });
+
+// ========================== Initial Data for Buildings ==============================
+

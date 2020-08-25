@@ -54,7 +54,9 @@ passport.deserializeUser(User.deserializeUser());
 
 // Require routes
 var authRoutes      = require("./routes/auth"),
-	courseRoutes    = require("./routes/courses");
+	courseRoutes    = require("./routes/courses"),
+	buildingRoutes  = require("./routes/buildings");
+
 
 
 
@@ -68,6 +70,7 @@ app.use(function(req, res, next) {
 // Use the routes and pre-set the prefix of the URL
 app.use("/", authRoutes);
 app.use("/courses", courseRoutes);
+app.use("/", buildingRoutes);
 
 
 // ==============================================================================
