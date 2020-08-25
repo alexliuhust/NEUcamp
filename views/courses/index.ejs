@@ -24,16 +24,19 @@
 			<div class="col-md-6 col-sm-12 col-xs-12 text-center">
 				<div class="thumbnail float-left">
 					
-					<ul>
+					<ul class="courseList">
 						<li><%= part.author.username %></li>
 						<li><%= part.number %> - <%= part.name %></li>
 						<li><%= part.time %>, <%= part.day %></li>
-						<li><%= part.classroom %></li>
+						<li>
+							<a href="#"><%= part.building %></a>
+							- <%= part.classroom %>
+						</li>
 					</ul>
 					<div class="buttonsDiv">
 						<a class="btn btn-sm btn-warning" href="/courses/<%= part._id %>/edit">EDIT</a>
 						<form action="/courses/<%= part._id %>?_method=DELETE" method="POST" id="deleteForm">
-							<button type="submit" class="btn btn-danger">DELETE</button>
+							<button type="submit" class="btn btn-sm btn-danger">DELETE</button>
 						</form>
 					</div>
 					

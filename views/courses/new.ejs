@@ -18,9 +18,21 @@
 				<div class="form-group">
 					<input class="form-control" type="text" name="course[time]" placeholder="Time" required>
 				</div>
+				
+				<div class="form-group">
+					<select class="form-control" name="course[building]" required>
+						<option>-Buildings-</option>
+						
+						<% building.forEach(function(part) { %>
+							<option><%= part.name %></option>
+						<% }); %>
+						
+					</select>
+				</div>
 				<div class="form-group">
 					<input class="form-control" type="text" name="course[classroom]" placeholder="Classroom" required>
 				</div>
+				
 				<div class="form-group">
 					<button class="btn btn-primary btn-lg btn-block">Submit</button>
 				</div>

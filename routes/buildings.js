@@ -6,9 +6,7 @@ var express    = require("express"),
 
 router.use(express.static(__dirname + "/public"));
 
-
-	
-
+//Index Route
 router.get("/buildings", function(req, res) {
 	Building.find({}, function(err, allBuildings) {
 		if (err) console.log(err);
@@ -18,6 +16,15 @@ router.get("/buildings", function(req, res) {
 	});
 });
 
+//Show Route
+router.get("/buildings/:id", function(req, res) {
+	Building.findById(req.params.id, function(err, found) {
+		if (err) console.log(err);
+		else {
+			res.render("buildings/show.ejs", {building: found});
+		}
+	});
+});
 
 
 

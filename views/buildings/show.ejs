@@ -1,0 +1,32 @@
+<%- include("../partials/header") %>
+
+<div class="container">
+	<div class="row">
+		<div class="myForm">
+			
+			<div class="col-xs-12">
+				<div class="thumbnail">
+					<img class="img-responsive" src="<%= building.image %>">
+					<div class="caption-full">
+						<h4><strong><%= building.name %></strong></h4>
+					</div>
+					<p class="description"><%- building.description %></p>
+					<a href="<%= building.location %>" class="btn btn-info">Location</a>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+
+
+
+<%- include("../partials/footer") %>
+
+
+
+
+
+
+

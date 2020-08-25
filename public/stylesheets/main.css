@@ -52,10 +52,14 @@ textarea {
 	margin-top: 30px;
 }
 
+.courseList {
+	list-style-type: none;
+}
 
 
 .buttonsDiv {
 	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .singleComment {

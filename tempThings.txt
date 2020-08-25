@@ -1,45 +1,63 @@
 
 // ========================== Initial Data for Buildings ==============================
-// var data = [
-// 	{
-// 		name: "Egan Research Center",
-// 		image: "/buildingImages/Egan.jpg",
-// 		description: "A prime nanotechnology research centre at Northeastern university. One of the facilities here is the George J Kostas Nanoscale Science Research Centre which has cleanrooms from class 100,000 to class 10 for micro and nano tech research. There's also on-campus meeting space for faculty and staff-sponsored events. The center features state-of-the-art audio-visual capabilites, full kitchen facilities, and two breakout/seminar rooms.",
-// 		location: "https://www.google.com/maps/place/Egan+Research+Center/@42.3376196,-71.0868663,17.33z/data=!4m5!3m4!1s0x89e37a2242375c21:0x36cbd69c9cb6a03d!8m2!3d42.3376754!4d-71.0888734"
-// 	}, 
-// 	{
-// 		name: "Interdisciplinary Science & Engineering Complex",
-// 		image: "/buildingImages/ISEC.jpg",
-// 		description: "NEU - Inter deciplinery building :-Very captivating. The stamp of ultimate luxury is prominently visible. The ease for design in the developing countries is the very advanced ventilation and temperature control systems, along with the luxury of uninterrupted power supply.",
-// 		location: "https://www.google.com/maps/place/Northeastern+University+Interdisciplinary+Science+%26+Engineering+Complex/@42.3376196,-71.0868663,17.33z/data=!4m5!3m4!1s0x0:0xbab99b179dfdea31!8m2!3d42.3377151!4d-71.0869617"
-// 	},
-// 	{
-// 		name: "Ryder Hall",
-// 		image: "/buildingImages/Ryder_Hall.jpg",
-// 		description: "Good Subway inside, also contains the Arts department. Spacey classrooms but the heat can be on the fritz sometimes. ",
-// 		location: "https://www.google.com/maps/place/Northeastern+University+-+Ryder+Hall/@42.3359279,-71.0911443,17.92z/data=!4m5!3m4!1s0x89e37a2231ffd0e3:0x2c41b534c8efab93!8m2!3d42.3366747!4d-71.0905927"
-// 	},
-// 	{
-// 		name: "Shillman Hall",
-// 		image: "/buildingImages/Shillman_Hall.jpg",
-// 		description: "Good and silent place to study. The classrooms are good and u even have an outlet of Dunkin donuts. Helps when u want to grab a cup of coffee during your study mode.",
-// 		location: "https://www.google.com/maps/place/Shillman+Hall/@42.3370664,-71.090468,17.92z/data=!4m5!3m4!1s0x89e37a223e177f73:0x17b8cc1f82aa4c1a!8m2!3d42.3375535!4d-71.0901911"
-// 	},
-// 	{
-// 		name: "Snell Library",
-// 		image: "/buildingImages/Snell_Library.jpg",
-// 		description: "Great place to study and even hang out. The printers are very conevnient in case you need to print anything. Good place to come read in between classes or at 3am because it's 24/7",
-// 		location: "https://www.google.com/maps/place/Snell+Library/@42.3379827,-71.0890084,17.33z/data=!4m5!3m4!1s0x89e37a1999cf5ce1:0x46e17e056ed496c3!8m2!3d42.3383961!4d-71.0880715"
-// 	}
-// ];
+var data = [
+	{
+		name: "Egan Research Center",
+		image: "/buildingImages/Egan.jpg",
+		description: "A prime nanotechnology research centre at Northeastern university. One of the facilities here is the George J Kostas Nanoscale Science Research Centre which has cleanrooms from class 100,000 to class 10 for micro and nano tech research. There's also on-campus meeting space for faculty and staff-sponsored events. The center features state-of-the-art audio-visual capabilites, full kitchen facilities, and two breakout/seminar rooms.",
+		location: "https://www.google.com/maps/place/Egan+Research+Center/@42.3376196,-71.0868663,17.33z/data=!4m5!3m4!1s0x89e37a2242375c21:0x36cbd69c9cb6a03d!8m2!3d42.3376754!4d-71.0888734"
+	}, 
+	{
+		name: "Interdisciplinary Science & Engineering Complex",
+		image: "/buildingImages/ISEC.jpg",
+		description: "NEU - Inter deciplinery building :-Very captivating. The stamp of ultimate luxury is prominently visible. The ease for design in the developing countries is the very advanced ventilation and temperature control systems, along with the luxury of uninterrupted power supply.",
+		location: "https://www.google.com/maps/place/Northeastern+University+Interdisciplinary+Science+%26+Engineering+Complex/@42.3376196,-71.0868663,17.33z/data=!4m5!3m4!1s0x0:0xbab99b179dfdea31!8m2!3d42.3377151!4d-71.0869617"
+	},
+	{
+		name: "Ryder Hall",
+		image: "/buildingImages/Ryder_Hall.jpg",
+		description: "Good Subway inside, also contains the Arts department. Spacey classrooms but the heat can be on the fritz sometimes. ",
+		location: "https://www.google.com/maps/place/Northeastern+University+-+Ryder+Hall/@42.3359279,-71.0911443,17.92z/data=!4m5!3m4!1s0x89e37a2231ffd0e3:0x2c41b534c8efab93!8m2!3d42.3366747!4d-71.0905927"
+	},
+	{
+		name: "Shillman Hall",
+		image: "/buildingImages/Shillman_Hall.jpg",
+		description: "Good and silent place to study. The classrooms are good and u even have an outlet of Dunkin donuts. Helps when u want to grab a cup of coffee during your study mode.",
+		location: "https://www.google.com/maps/place/Shillman+Hall/@42.3370664,-71.090468,17.92z/data=!4m5!3m4!1s0x89e37a223e177f73:0x17b8cc1f82aa4c1a!8m2!3d42.3375535!4d-71.0901911"
+	},
+	{
+		name: "Snell Library",
+		image: "/buildingImages/Snell_Library.jpg",
+		description: "Great place to study and even hang out. The printers are very conevnient in case you need to print anything. Good place to come read in between classes or at 3am because it's 24/7",
+		location: "https://www.google.com/maps/place/Snell+Library/@42.3379827,-71.0890084,17.33z/data=!4m5!3m4!1s0x89e37a1999cf5ce1:0x46e17e056ed496c3!8m2!3d42.3383961!4d-71.0880715"
+	},
+	{
+		name: "School of Law",
+		image: "/buildingImages/School_of_Law.jpg",
+		description: "“Experiential” and “collaborative” are today’s hot buttons in legal education. But at this law school those buttons have been hot for 50 years. We developed our practical learning education model in 1968. Central to it is our Cooperative Legal Education Program, which allows you to graduate with multiple full-time jobs on your resume. We walk the talk in terms of collaboration, too. Instead of grades, students get written evaluations from their professors and co-op employers. Without a class rank to compete for, students are free to work together and take intellectual risks they might not be able to if they felt they had to always watch their backs.",
+		location: "https://www.google.com/maps/place/%E4%B8%9C%E5%8C%97%E5%A4%A7%E5%AD%A6%E6%B3%95%E5%AD%A6%E9%99%A2/@42.3392015,-71.0923465,17z/data=!3m1!4b1!4m5!3m4!1s0x89e37a1999cf5ce1:0xd790bd3b9c567f08!8m2!3d42.3391989!4d-71.0908821"
+	}, 
+	{
+		name: "Khoury College of Computer Sciences",
+		image: "/buildingImages/Khoury.jpg",
+		description: "The Khoury College of Computer Sciences is one of the nine colleges of Northeastern University in Boston, Massachusetts. It specializes in computer science, data science and cybersecurity. Prior to December 16, 2018, Khoury College was known as the College of Computer and Information Science.The College offers Bachelor of Science (B.S.), Bachelor of Arts (B.A.), Master of Science (M.S.), and doctoral degrees in computer science, as well as undergraduate and graduate degrees in interdisciplinary, computer-related fields. Some 1000 masters and 133 doctoral candidates are enrolled in the College",
+		location: "https://www.google.com/maps/place/Northeastern+University+Khoury+College+of+Computer+Sciences/@42.3386529,-71.0921979,19z/data=!4m12!1m6!3m5!1s0x89e37a1999cf5ce1:0xd790bd3b9c567f08!2z5Lic5YyX5aSn5a2m5rOV5a2m6Zmi!8m2!3d42.3391989!4d-71.0908821!3m4!1s0x0:0x700c0dcee6d75d69!8m2!3d42.3386529!4d-71.0921979"
+	},
+	{
+		name: "West Village G",
+		image: "/buildingImages/West_Village_G.jpg",
+		description: "West Village G is a six-story apartment-style building that also houses four tiered classrooms. The building is located at 450 Parker Street, set between West Village H, Willis Hall, and West Village B.",
+		location: "https://www.google.com/maps/place/West+Village+G/@42.3382722,-71.0919855,19z/data=!4m12!1m6!3m5!1s0x89e37a1999cf5ce1:0xd790bd3b9c567f08!2z5Lic5YyX5aSn5a2m5rOV5a2m6Zmi!8m2!3d42.3391989!4d-71.0908821!3m4!1s0x89e37a21f1bc9735:0x655e0c46cdbdf694!8m2!3d42.3382722!4d-71.0919855"
+	}
+];
 
 
-// data.forEach(function(bds) {
-// 	Building.create(bds, function(err, building) {
-// 		if (err) console.log(err);
-// 		else console.log("Successfully added a new building");
-// 	});
-// });
+data.forEach(function(bds) {
+	Building.create(bds, function(err, building) {
+		if (err) console.log(err);
+		else console.log("Successfully added a new building");
+	});
+});
 
 // ========================== Initial Data for Buildings ==============================
 

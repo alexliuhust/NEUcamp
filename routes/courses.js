@@ -1,6 +1,7 @@
 var express    = require("express"),
     router     = express.Router(),
     Course 	   = require("../models/course"),
+	Building   = require("../models/building");
 	MiddleWare = require("../middleware");
 
 //Index Route
@@ -15,7 +16,12 @@ router.get("/", MiddleWare.isLoggedIn, function(req, res) {
 
 //New Route
 router.get("/new", MiddleWare.isLoggedIn, function(req, res) {
-	res.render("courses/new.ejs");
+	Building.find({}, function(err, allBuildings) {
+		if (err) console.log(err);
+		else {
+			res.render("courses/new.ejs", {building: allBuildings});
+		}
+	});
 });
 
 //Create Route
@@ -37,7 +43,12 @@ router.post("/", MiddleWare.isLoggedIn, function(req, res) {
 //Edit Route
 router.get("/:id/edit", MiddleWare.courseIsPermitted, function(req, res) {
 	Course.findById(req.params.id, function(err, found) {
-		res.render("courses/edit.ejs", {course: found});
+		Building.find({}, function(err, allBuildings) {
+			if (err) console.log(err);
+			else {
+				res.render("courses/edit.ejs", {course: found, building: allBuildings});
+			}
+		});
 	});
 });
 
@@ -50,16 +61,6 @@ router.put("/:id", MiddleWare.courseIsPermitted, function(req, res) {
 		}
 	});
 });
-
-//Delete Route
-// router.delete("/:id", MiddleWare.courseIsPermitted, function(req, res) {
-// 	Course.findByIdAndDelete(req.params.comid, function(err) {
-// 		if (err) res.redirect("back");
-// 		else {
-// 			res.redirect("/courses");
-// 		}
-// 	});
-// });
 
 router.delete("/:id", MiddleWare.courseIsPermitted, async(req, res) => {
 	try {
