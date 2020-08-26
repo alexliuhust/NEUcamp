@@ -1,8 +1,12 @@
 var express    = require("express"),
     router     = express.Router(),
+	bodyParser = require('body-parser'),
     Course 	   = require("../models/course"),
-	Building   = require("../models/building");
+	Building   = require("../models/building"),
 	MiddleWare = require("../middleware");
+
+
+router.use(bodyParser.urlencoded({ extended: true}));
 
 //Index Route
 router.get("/", MiddleWare.isLoggedIn, function(req, res) {
@@ -39,6 +43,24 @@ router.post("/", MiddleWare.isLoggedIn, function(req, res) {
 		}
 	});
 });
+
+//Show Route
+router.get("/:id", MiddleWare.isLoggedIn, function(req, res) {
+	Course.findById(req.params.id, function(err, foundCourse) {
+		if (err) console.log(err);
+		else {
+			Building.find({name: foundCourse.building}, function(err, foundBuilding) {
+				if (err) console.log(err);
+				else {
+					console.log(foundBuilding["name"]);
+					res.render("courses/show.ejs", {course: foundCourse, building: foundBuilding});
+					
+				}
+			});
+		}
+	});
+});
+
 
 //Edit Route
 router.get("/:id/edit", MiddleWare.courseIsPermitted, function(req, res) {
