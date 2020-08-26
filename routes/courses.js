@@ -49,12 +49,15 @@ router.get("/:id", MiddleWare.isLoggedIn, function(req, res) {
 	Course.findById(req.params.id, function(err, foundCourse) {
 		if (err) console.log(err);
 		else {
-			Building.find({name: foundCourse.building}, function(err, foundBuilding) {
+			Building.find({}, function(err, allBuildings) {
 				if (err) console.log(err);
 				else {
-					console.log(foundBuilding["name"]);
-					res.render("courses/show.ejs", {course: foundCourse, building: foundBuilding});
-					
+					allBuildings.forEach(function(part) {
+						if (part.name === foundCourse.building) {
+							var foundBuilding = part;
+							res.render("courses/show.ejs", {course: foundCourse, building: foundBuilding});
+						}
+					});
 				}
 			});
 		}
