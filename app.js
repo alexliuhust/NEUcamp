@@ -70,7 +70,7 @@ app.use(function(req, res, next) {
 // Use the routes and pre-set the prefix of the URL
 app.use("/", authRoutes);
 app.use("/courses", courseRoutes);
-app.use("/", buildingRoutes);
+app.use("/buildings", buildingRoutes);
 
 
 // ==============================================================================

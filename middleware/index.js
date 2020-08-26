@@ -30,24 +30,13 @@ MiddleWare.courseIsPermitted = function(req, res, next) {
 	
 }
 
-// MiddleWare.buildingIsPermitted = function(req, res, next) {
-// 	if (req.isAuthenticated()) {
-// 		Building.findById(req.params.comid, function(err, found) {
-// 			if (err) {
-// 				// req.flash("error", "building not found!");
-// 				res.redirect("back");
-// 			}
-// 			else {
-// 				if (found.author.id.equals(req.user._id)) return next();
-// 				// req.flash("error", "You are not permitted!");
-// 				res.redirect("back");
-// 			}
-// 		});
-// 	} else {
-// 		// req.flash("error", "Please Log In First");
-// 		res.redirect("back");
-// 	}
-// }
+MiddleWare.isAdministrator = function(req, res, next) {
+	if (req.user._id.equals('5f46770b93eb7f01c03eef02')) {
+		return next();
+	} else {
+		res.redirect("back");
+	}
+}
 
 module.exports = MiddleWare
 

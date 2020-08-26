@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Yelp Camp Ladush</title>
+	<title>NEU Camp</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 	<link rel="stylesheet" href="/stylesheets/main.css">
@@ -29,7 +29,11 @@
 					<li class="navs"><a href="/courses">My courses</a></li>
 					<li class="navs"><a href="/courses/new">Add course</a></li>
 					<li class="navs"><a href="/buildings">All buildings</a></li>
-					<li class="navs"><a href="#">Add building</a></li>
+					<% if (currentUser && currentUser._id.equals('5f46770b93eb7f01c03eef02')) { %>
+						<li class="navs"><a href="/buildings/new">Add building</a></li>
+					<% } %>
+					
+					
 				</ul>
 				
 				<ul class="nav navbar-nav navbar-right">

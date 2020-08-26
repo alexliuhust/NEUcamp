@@ -87,6 +87,7 @@ router.put("/:id", MiddleWare.courseIsPermitted, function(req, res) {
 	});
 });
 
+//Delete Route
 router.delete("/:id", MiddleWare.courseIsPermitted, async(req, res) => {
 	try {
     	let foundCourse = await Course.findById(req.params.id);

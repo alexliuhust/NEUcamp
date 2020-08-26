@@ -13,6 +13,14 @@
 					<p class="description"><%- building.description %></p>
 					<a href="<%= building.location %>" class="btn btn-info">Location</a>
 				</div>
+				
+				<div class="buttonsDiv">
+					<a class="btn btn-sm btn-warning" href="/buildings/<%= building._id %>/edit">EDIT</a>
+					<form action="/buildings/<%= building._id %>?_method=DELETE" method="POST" id="deleteForm">
+						<button type="submit" class="btn btn-sm btn-danger">DELETE</button>
+					</form>
+				</div>
+				
 			</div>
 			
 		</div>
