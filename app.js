@@ -13,8 +13,6 @@ var express     		= require("express"),
 	LocalStrategy 		= require("passport-local"),
 	passportLocalMongoose = require("passport-local-mongoose");
 
-
-
 // Connect the DB 
 mongoose.connect('mongodb://localhost:27017/NEUcamp', {
 	useNewUrlParser: true,
@@ -26,9 +24,6 @@ mongoose.connect('mongodb://localhost:27017/NEUcamp', {
 	console.log("");
 })
 .catch(error => console.log(error.message));
-
-
-
 
 // app.use something
 app.use(bodyParser.urlencoded({ extended: true}));
@@ -45,25 +40,20 @@ app.use(require("express-session")({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
-
 
 // Require routes
 var authRoutes      = require("./routes/auth"),
 	courseRoutes    = require("./routes/courses"),
 	buildingRoutes  = require("./routes/buildings");
 
-
-
-
-
-// Pass the variable currentUser to every route
+// Pass the variable currentUser, error flash, and success flash to every route
 app.use(function(req, res, next) {
 	res.locals.currentUser = req.user;
+	res.locals.errorM = req.flash("error");
+	res.locals.successM = req.flash("success");
 	next();
 });
 
@@ -72,13 +62,10 @@ app.use("/", authRoutes);
 app.use("/courses", courseRoutes);
 app.use("/buildings", buildingRoutes);
 
-
 // ==============================================================================
 
-
-
 app.get("*", function(req, res) {
-	res.send("Iyt dsinh iyt'r de ivarmah neut phovaund 404, iyt alsshiynebul?");
+	res.send("Oh-oh! You hit the wall! (404 NOT FOUND)");
 });
 
 app.listen(3000, function() { 

@@ -51,3 +51,16 @@
 
 		</div>
 	</nav>
+	
+	<div class="container">
+		<% if(errorM && errorM.length > 0) { %>
+			<div class="alert alert-danger" role="alert"><%= errorM %></div>
+		<% } %>
+		<% if(successM && successM.length > 0) { %>
+			<div class="alert alert-success" role="alert"><%= successM %></div>
+		<% } %>
+	</div>
+	
+	
+	
+	

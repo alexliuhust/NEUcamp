@@ -92,10 +92,10 @@ router.delete("/:id", MiddleWare.courseIsPermitted, async(req, res) => {
 	try {
     	let foundCourse = await Course.findById(req.params.id);
     	await foundCourse.delete();
-		// req.flash("success", "Course Deleted");
+		req.flash("success", "Course Deleted");
     	res.redirect("/courses");
   	} catch (error) {
-    	// console.log(error.message);
+    	console.log(error.message);
     	res.redirect("/courses");
   	}
 });

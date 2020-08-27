@@ -67,10 +67,10 @@ router.delete("/:id", MiddleWare.isAdministrator, async(req, res) => {
 	try {
     	let foundBuilding = await Building.findById(req.params.id);
     	await foundBuilding.delete();
-		// req.flash("success", "Building Deleted");
+		req.flash("success", "Building Deleted");
     	res.redirect("/buildings");
   	} catch (error) {
-    	// console.log(error.message);
+    	console.log(error.message);
     	res.redirect("/buildings");
   	}
 });
