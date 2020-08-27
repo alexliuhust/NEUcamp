@@ -8,7 +8,7 @@
 				MY COURSES
 			</h1>
 			<p>
-				All my courses and their information are listed here!
+				<%= currentUser.username %>'s courses are listed here!
 			</p>
 			<p>
 				<a class="btn btn-warning btn-lg" href="/courses/new">Add a new course</a>
@@ -23,15 +23,12 @@
 			
 			<div class="col-md-6 col-sm-12 col-xs-12 text-center">
 				<div class="thumbnail float-left">
+					<div class="caption">
+						<h4><strong><%= part.number %></strong></h4>
+						<h3><%= part.name %></h3>
+						<a class="btn btn-info courseinfo" href="/courses/<%= part._id %>">INFO</a>
+					</div>
 					
-					<ul class="courseList">
-						<li><%= part.author.username %></li>
-						<li><%= part.number %> - <%= part.name %></li>
-						<li><%= part.time %>, <%= part.day %></li>
-						<li><%= part.building %>- <%= part.classroom %></li>
-					</ul>
-					
-					<a class="btn btn-info" href="/courses/<%= part._id %>">INFO</a>
 				</div>
 			</div>
 		

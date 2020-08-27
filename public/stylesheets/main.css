@@ -4,6 +4,10 @@ h1 {
 	width: 100%;
 }
 
+.jumbotron {
+	text-align: center;
+}
+
 .row {
 	display: flex;
 	flex-wrap: wrap;
@@ -14,19 +18,19 @@ h1 {
 	margin: 50px auto;
 }
 
-textarea {
-	width: 50%;
-	margin-bottom: 30px;
-}
 
 #deleteForm {
 	display: inline;
 }
 
-.MoreInfo {
-	margin: 5px;
+.InfoCon {
+	max-width: 800px;
+	margin: 0 auto;
 }
 
+.buildingName {
+	text-align: center;
+}
 
 .navs {
 	font-size: 18px;
@@ -37,19 +41,11 @@ textarea {
 }
 
 .caption-full {
-	padding: 8px;
+	padding: 15px;
 }
 
 .img-responsive {
 	width: 100%;
-}
-
-.description {
-	margin-top: 30px;
-}
-
-.showPageComments {
-	margin-top: 30px;
 }
 
 .courseList {
@@ -62,31 +58,26 @@ textarea {
 	padding-bottom: 10px;
 }
 
-.singleComment {
-	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-	padding-bottom: 5px;
-}
-
-.commentText {
-	margin-bottom: 2px;
-}
-
-.commentsTitle {
-	padding-top: 10px;
-	font-size: 25px;
-	font-weight: 700;
-	border-bottom: 2px solid grey;
-}
-
-.glyphicon-plus {
-	color: grey;
-}
-
 .logContainer {
 	max-width: 400px;
 	width: 70%;
 	margin: 0 auto;
 }
+
+.courseinfo {
+	width: 50%;
+}
+
+.buildinginfo{
+	width: 50%;
+}
+
+
+
+
+
+
+
 
 
 

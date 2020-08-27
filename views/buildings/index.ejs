@@ -16,12 +16,12 @@
 	<div class="row">
 		<% building.forEach(function(part) { %>
 			
-			<div class="col-lg-3 col-md-4 col-sm-6 text-center">
+			<div class="col-md-4 col-sm-6 text-center">
 				<div class="thumbnail float-left">
 					<img src="<%= part.image %>">
 					<div class="caption">
 						<h4><%= part.name %></h4>
-						<a class="btn btn-info btn-sm" href="/buildings/<%= part._id %>">INFO</a>
+						<a class="btn btn-info btn-sm buildinginfo" href="/buildings/<%= part._id %>">INFO</a>
 					</div>
 					
 				</div>

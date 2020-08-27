@@ -27,8 +27,8 @@
 			<div class="collapse navbar-collapse" id="collapse-1">
 				<ul class="nav navbar-nav">
 					<li class="navs"><a href="/courses">My courses</a></li>
-					<li class="navs"><a href="/courses/new">Add course</a></li>
-					<li class="navs"><a href="/buildings">All buildings</a></li>
+					<li class="navs"><a href="/courses/new">Add</a></li>
+					<li class="navs"><a href="/buildings">Buildings</a></li>
 					<% if (currentUser && currentUser._id.equals('5f46770b93eb7f01c03eef02')) { %>
 						<li class="navs"><a href="/buildings/new">Add building</a></li>
 					<% } %>
@@ -41,7 +41,7 @@
 						<li class="navs"><a href="/login">Log In</a></li>
 						<li class="navs"><a href="/register">Sign up</a></li>
 					<% } else { %>
-						<li class="navs"><a href="#">Signed in as <%= currentUser.username %></a></li>
+						<li class="navs"><a href="/courses">Signed in as <%= currentUser.username.substring(0, 10) %></a></li>
 						<li class="navs"><a href="/logout">Log Out</a></li>
 					<% } %>
 					

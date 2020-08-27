@@ -1,29 +1,34 @@
 <%- include("../partials/header") %>
 
-<div class="container">
+<div class="container InfoCon">
 	<div class="row">
 		<div class="myForm">
 			
 			<div class="col-xs-12">
 				<div class="thumbnail">
 					<div class="caption-full">
-						<h3><strong><%= course.number %> - <%= course.name %></strong></h3>
-						<ul class="courseList">
-							<li><%= course.time %>, <%= course.day %></li>
-							<li><%= course.building %>- <%= course.classroom %></li>
-						</ul>
+						<h2><%= course.number %> - <strong><%= course.name %></strong></h2>
+						<h4>
+							<strong>Time and Days: </strong><%= course.time %>, <%= course.day %>
+						</h4>
+						<h4>
+							<strong>Location: </strong><%= course.building %> - <%= course.classroom %>
+						</h4>
+						
 						
 						<a class="btn btn-info" href="/buildings/<%= building._id %>">Building Info</a>
 					</div>
 					
-					<div class="buttonsDiv">
-						<a class="btn btn-sm btn-warning" href="/courses/<%= course._id %>/edit">EDIT</a>
-						<form action="/courses/<%= course._id %>?_method=DELETE" method="POST" id="deleteForm">
-							<button type="submit" class="btn btn-sm btn-danger">DELETE</button>
-						</form>
-					</div>
+					
 					
 				</div>
+				<div class="buttonsDiv">
+					<a class="btn btn-sm btn-warning" href="/courses/<%= course._id %>/edit">EDIT</a>
+					<form action="/courses/<%= course._id %>?_method=DELETE" method="POST" id="deleteForm">
+						<button type="submit" class="btn btn-sm btn-danger">DELETE</button>
+					</form>
+				</div>
+				
 			</div>
 			
 		</div>
