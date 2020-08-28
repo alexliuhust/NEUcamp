@@ -9,8 +9,16 @@
 					<div class="caption-full">
 						<h2><%= course.number %> - <strong><%= course.name %></strong></h2>
 						<h4>
-							<strong>Time and Days: </strong><%= course.time %>, <%= course.day %>
+							<strong>Day And Time: </strong>
 						</h4>
+						<ul>
+							<% course.Time.forEach(function(part) { %>
+								<% if(part.day != "" && part.time != "") { %>
+									<li><%= part.day %> - <%= part.time %></li>
+								<% } %>
+									
+							<% }); %>
+						</ul>
 						<h4>
 							<strong>Location: </strong><%= course.building %> - <%= course.classroom %>
 						</h4>
@@ -32,7 +40,9 @@
 			</div>
 			
 		</div>
+		
 	</div>
+	<a href="/courses">Go Back</a>
 </div>
 
 

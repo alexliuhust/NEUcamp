@@ -3,12 +3,24 @@ var mongoose = require("mongoose");
 var courseSchema = new mongoose.Schema({
 	number: String,
 	name: String, 
-	day: String,
-	time: String,
+	Time: [
+		{
+			day: String,
+			time: String
+		},
+		{
+			day: String,
+			time: String
+		},
+		{
+			day: String,
+			time: String
+		}
+	],
 	author: {
 		id: {
 			type: mongoose.Schema.Types.ObjectId,
-	 		ref: "User"
+			ref: "User"
 		},
 		username: String
 	},

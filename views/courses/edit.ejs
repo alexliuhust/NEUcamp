@@ -8,24 +8,68 @@
 		<div class="myForm">
 			<form action="/courses/<%= course._id %>?_method=PUT" method="POST">
 				<div class="form-group">
-					<label>Course Code</label>
+					<label>Course Code*</label>
 					<input class="form-control" type="text" name="course[number]" value="<%= course.number %>" required>
 				</div>
 				<div class="form-group">
-					<label>Name</label>
+					<label>Name*</label>
 					<input class="form-control" type="text" name="course[name]" value="<%= course.name %>" required>
 				</div>
+				
 				<div class="form-group">
-					<label>Day</label>
-					<input class="form-control" type="text" name="course[day]" value="<%= course.day %>" required>
+					<label>Day 1*</label>
+					<select class="form-control" name="course[Time][0][day]" required>
+						<option>Monday</option>
+						<option>Tuesday</option>
+						<option>Wednesday</option>
+						<option>Thursday</option>
+						<option>Friday</option>
+						<option>Saturday</option>
+						<option>Sunday</option>
+					</select>
 				</div>
 				<div class="form-group">
-					<label>Time</label>
-					<input class="form-control" type="text" name="course[time]" value="<%= course.time %>" required>
+					<label>Time 1*</label>
+					<input class="form-control" type="text" name="course[Time][0][time]" value="<%= course.Time[0].time %>" required>
 				</div>
 				<div class="form-group">
+					<label>Day 2</label>
+					<select class="form-control" name="course[Time][1][day]">
+						<option></option>
+						<option>Monday</option>
+						<option>Tuesday</option>
+						<option>Wednesday</option>
+						<option>Thursday</option>
+						<option>Friday</option>
+						<option>Saturday</option>
+						<option>Sunday</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Time 2</label>
+					<input class="form-control" type="text" name="course[Time][1][time]" value="<%= course.Time[1].time %>">
+				</div>
+				<div class="form-group">
+					<label>Day 3</label>
+					<select class="form-control" name="course[Time][2][day]">
+						<option></option>
+						<option>Monday</option>
+						<option>Tuesday</option>
+						<option>Wednesday</option>
+						<option>Thursday</option>
+						<option>Friday</option>
+						<option>Saturday</option>
+						<option>Sunday</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label>Time 3</label>
+					<input class="form-control" type="text" name="course[Time][2][time]" value="<%= course.Time[2].time %>">
+				</div>
+				
+				<div class="form-group">
+					<label>Building*</label>
 					<select class="form-control" name="course[building]" required>
-						<option>-Buildings-</option>
 						
 						<% building.forEach(function(part) { %>
 							<option><%= part.name %></option>
@@ -34,7 +78,7 @@
 					</select>
 				</div>
 				<div class="form-group">
-					<label>Classroom</label>
+					<label>Classroom*</label>
 					<input class="form-control" type="text" name="course[classroom]" value="<%= course.classroom %>" required>
 				</div>
 				<div class="form-group">

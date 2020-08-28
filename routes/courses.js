@@ -82,7 +82,7 @@ router.put("/:id", MiddleWare.courseIsPermitted, function(req, res) {
 	Course.findByIdAndUpdate(req.params.id, req.body.course, function(err, updated) {
 		if (err) console.log(err);
 		else {
-			res.redirect("/courses");
+			res.redirect("/courses/" + req.params.id);
 		}
 	});
 });
