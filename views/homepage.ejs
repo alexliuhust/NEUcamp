@@ -1,7 +1,36 @@
-<%- include("partials/header") %>
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>NEU Camp</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+		<link rel="stylesheet" href="/stylesheets/homepage.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+	</head>
 
-<h1>
-	The Home Page!!!!!
-</h1>
+
+<body>
+
+	<div class="container">
+		<% if(errorM && errorM.length > 0) { %>
+			<div class="alert alert-danger" role="alert"><%= errorM %></div>
+		<% } %>
+		<% if(successM && successM.length > 0) { %>
+			<div class="alert alert-success" role="alert"><%= successM %></div>
+		<% } %>
+	</div>
+		
+	<div id="landing-header">
+ 		<h1>The Home Page</h1>
+		<a href="/courses" class="btn btn-lg btn-success">View All My Courses</a>
+    </div>
+	
+	<ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
 
 <%- include("partials/footer") %>
